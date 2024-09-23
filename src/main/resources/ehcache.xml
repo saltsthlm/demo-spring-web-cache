@@ -21,7 +21,7 @@
 
         <resources>
             <heap>2</heap>
-            <offheap unit="MB">1</offheap>
+<!--            <offheap unit="MB">1</offheap>--><!-- if you want extra heap memory off JVM -->
         </resources>
     </cache>
 
