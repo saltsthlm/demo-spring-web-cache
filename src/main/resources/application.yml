@@ -1,3 +1,7 @@
 spring:
   application:
     name: demo-spring-web-cache
+  cache:
+    jcache:
+#      provider: "com.example.MyCachingProvider"
+      config: "classpath:ehcache.xml"
