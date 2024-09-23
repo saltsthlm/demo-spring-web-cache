@@ -40,6 +40,10 @@ public class MyService {
             System.out.println("it's jcache...");
             javax.cache.Cache<Object, Object> nativeCache = jcache.getNativeCache();
             for (javax.cache.Cache.Entry<Object, Object> next : nativeCache) {
+                if (next == null) {
+                    System.out.println("this cache entry has just been evicted");
+                    continue;
+                }
                 System.out.println(next.getKey() + " : " + next.getValue());
             }
         } else if (cache != null) {
